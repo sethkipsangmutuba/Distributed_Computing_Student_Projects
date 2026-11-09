@@ -1,2 +1,2 @@
-# ICS-2404-Student-Repository
+# ICS-2404-Student-Projects
 Submissions
