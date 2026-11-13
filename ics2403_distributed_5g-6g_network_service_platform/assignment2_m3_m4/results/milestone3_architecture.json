@@ -1,0 +1,73 @@
+{
+  "service_decomposition": {
+    "edge-1": {
+      "node_type": "EDGE",
+      "services": [
+        "SessionHandling",
+        "LocalQoSScheduling"
+      ]
+    },
+    "edge-2": {
+      "node_type": "EDGE",
+      "services": [
+        "SessionHandling",
+        "LocalQoSScheduling"
+      ]
+    },
+    "ran-1": {
+      "node_type": "RAN",
+      "services": [
+        "RadioResourceControl",
+        "LocalQoSScheduling"
+      ]
+    },
+    "core-1": {
+      "node_type": "CORE",
+      "services": [
+        "ResourceOrchestration",
+        "MobilityManagement",
+        "Coordination"
+      ]
+    },
+    "cloud-1": {
+      "node_type": "CLOUD",
+      "services": [
+        "Analytics",
+        "LongTermStorage",
+        "PolicyManagement"
+      ]
+    }
+  },
+  "scalability_experiment": {
+    "1_edge_nodes": {
+      "throughput_tasks_per_sec": 152.137,
+      "mean_latency_ms": 19.292,
+      "p95_latency_ms": 80.93,
+      "packet_loss_rate": 0.5556
+    },
+    "2_edge_nodes": {
+      "throughput_tasks_per_sec": 153.834,
+      "mean_latency_ms": 27.022,
+      "p95_latency_ms": 107.833,
+      "packet_loss_rate": 0.2778
+    },
+    "4_edge_nodes": {
+      "throughput_tasks_per_sec": 158.629,
+      "mean_latency_ms": 31.475,
+      "p95_latency_ms": 107.728,
+      "packet_loss_rate": 0.0556
+    }
+  },
+  "edge_vs_core_tradeoff": {
+    "edge_only": {
+      "throughput_tasks_per_sec": 141.441,
+      "mean_latency_ms": 29.728,
+      "packet_loss_rate": 0.3444
+    },
+    "core_only": {
+      "throughput_tasks_per_sec": 150.25,
+      "mean_latency_ms": 31.544,
+      "packet_loss_rate": 0.0778
+    }
+  }
+}

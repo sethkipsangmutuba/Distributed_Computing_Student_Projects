@@ -1,0 +1,4 @@
+scenario,attempt_count,predicted_commit_rate
+normal,70122,1.0
+high_load,19984,1.0
+node_down,9894,0.0

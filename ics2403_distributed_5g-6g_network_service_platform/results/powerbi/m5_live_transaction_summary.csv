@@ -1,0 +1,6 @@
+metric,value
+total_live_transactions,50
+committed,50
+commit_rate,1.0
+batch_rows_processed,100000
+spark_partitions_used,8

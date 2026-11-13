@@ -1,0 +1,101 @@
+{
+  "race_condition_experiment": {
+    "expected": 160,
+    "unsafe_result": 23,
+    "updates_lost": 137,
+    "safe_result": 160,
+    "mutual_exclusion_correct": true
+  },
+  "resource_allocation_graph_baseline": [
+    {
+      "process": "P1",
+      "resource": "cpu_pool",
+      "node": "edge-1",
+      "status": "granted"
+    },
+    {
+      "process": "P2",
+      "resource": "memory_pool",
+      "node": "edge-1",
+      "status": "granted"
+    },
+    {
+      "process": "P3",
+      "resource": "bandwidth_pool",
+      "node": "edge-1",
+      "status": "granted"
+    }
+  ],
+  "deadlock_experiment": {
+    "still_blocked_after_1s": true,
+    "detection_report": {
+      "wait_for_graph": {
+        "Tx-B": [
+          "Tx-A"
+        ],
+        "Tx-A": [
+          "Tx-B"
+        ]
+      },
+      "cycles_found": [
+        [
+          "Tx-B",
+          "Tx-A",
+          "Tx-B"
+        ]
+      ],
+      "resolutions": [
+        {
+          "victim": "Tx-B",
+          "cycle": [
+            "Tx-B",
+            "Tx-A",
+            "Tx-B"
+          ],
+          "broadcast_results": {
+            "edge-1": "marked",
+            "edge-2": "marked",
+            "ran-1": "marked",
+            "core-1": "marked",
+            "cloud-1": "marked"
+          }
+        }
+      ],
+      "detection_elapsed_ms": 24.349
+    },
+    "final_outcomes": {
+      "B_core1": "granted",
+      "A_edge1": "granted",
+      "B_edge1": "aborted_by_deadlock_resolution",
+      "A_core1": "granted"
+    },
+    "both_transactions_finished_after_resolution": true
+  },
+  "final_resource_utilization": {
+    "edge-1": {
+      "cpu": 0.0,
+      "memory": 0.0,
+      "bandwidth": 0.0
+    },
+    "edge-2": {
+      "cpu": 0.0,
+      "memory": 0.0,
+      "bandwidth": 0.0
+    },
+    "ran-1": {
+      "cpu": 0.0,
+      "memory": 0.0,
+      "bandwidth": 0.0
+    },
+    "core-1": {
+      "cpu": 0.0,
+      "memory": 0.0,
+      "bandwidth": 0.0
+    },
+    "cloud-1": {
+      "cpu": 0.0,
+      "memory": 0.0,
+      "bandwidth": 0.0
+    }
+  }
+}

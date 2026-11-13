@@ -1,0 +1,66 @@
+{
+  "technology": "Apache Spark (PySpark, local[*] mode)",
+  "total_rows_processed": 100000,
+  "spark_partitions_used": 8,
+  "by_service_class": [
+    {
+      "service_class": "mMTC",
+      "task_count": 49720,
+      "avg_cpu": 1.0,
+      "avg_memory_mb": 19.96,
+      "avg_bandwidth_mbps": 2.0,
+      "avg_work_units": 10.0,
+      "total_bandwidth_demand_mbps": 99416.6,
+      "stddev_work_units": 2.885
+    },
+    {
+      "service_class": "eMBB",
+      "task_count": 30023,
+      "avg_cpu": 2.996,
+      "avg_memory_mb": 320.34,
+      "avg_bandwidth_mbps": 29.93,
+      "avg_work_units": 80.02,
+      "total_bandwidth_demand_mbps": 898471.7,
+      "stddev_work_units": 23.214
+    },
+    {
+      "service_class": "URLLC",
+      "task_count": 20257,
+      "avg_cpu": 1.499,
+      "avg_memory_mb": 79.74,
+      "avg_bandwidth_mbps": 6.0,
+      "avg_work_units": 14.91,
+      "total_bandwidth_demand_mbps": 121625.7,
+      "stddev_work_units": 5.77
+    }
+  ],
+  "by_node": [
+    {
+      "assigned_node": "edge-2",
+      "node_type": "EDGE",
+      "task_count": 35089,
+      "total_cpu_demand": 40141.9,
+      "total_memory_demand_mb": 1307689.9,
+      "total_bandwidth_demand_mbps": 110908.6,
+      "avg_work_units": 11.47
+    },
+    {
+      "assigned_node": "edge-1",
+      "node_type": "EDGE",
+      "task_count": 34888,
+      "total_cpu_demand": 39950.5,
+      "total_memory_demand_mb": 1299986.1,
+      "total_bandwidth_demand_mbps": 110133.7,
+      "avg_work_units": 11.37
+    },
+    {
+      "assigned_node": "ran-1",
+      "node_type": "RAN",
+      "task_count": 30023,
+      "total_cpu_demand": 89952.7,
+      "total_memory_demand_mb": 9617715.0,
+      "total_bandwidth_demand_mbps": 898471.7,
+      "avg_work_units": 80.02
+    }
+  ]
+}

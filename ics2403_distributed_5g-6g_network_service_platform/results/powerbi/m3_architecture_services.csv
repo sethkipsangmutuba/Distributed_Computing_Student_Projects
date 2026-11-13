@@ -1,0 +1,13 @@
+node,node_type,service,election_id
+edge-1,EDGE,SessionHandling,10
+edge-1,EDGE,LocalQoSScheduling,10
+edge-2,EDGE,SessionHandling,11
+edge-2,EDGE,LocalQoSScheduling,11
+ran-1,RAN,RadioResourceControl,20
+ran-1,RAN,LocalQoSScheduling,20
+core-1,CORE,ResourceOrchestration,30
+core-1,CORE,MobilityManagement,30
+core-1,CORE,Coordination,30
+cloud-1,CLOUD,Analytics,40
+cloud-1,CLOUD,LongTermStorage,40
+cloud-1,CLOUD,PolicyManagement,40

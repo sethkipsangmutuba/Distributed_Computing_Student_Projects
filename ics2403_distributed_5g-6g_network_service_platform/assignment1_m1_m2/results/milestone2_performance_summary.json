@@ -1,0 +1,189 @@
+{
+  "n_tasks": 120,
+  "concurrency": 6,
+  "workload_composition": {
+    "eMBB": 37,
+    "URLLC": 29,
+    "mMTC": 54
+  },
+  "summary": {
+    "wall_clock_seconds": 0.822,
+    "total_requests": 120,
+    "throughput_tasks_per_sec": 131.381,
+    "latency": {
+      "mean_ms": 28.438,
+      "min_ms": 5.92,
+      "max_ms": 119.311,
+      "p95_ms": 90.155,
+      "jitter_ms": 29.316
+    },
+    "packet_loss_rate": 0.1,
+    "status_breakdown": {
+      "completed": 108,
+      "rejected": 10,
+      "dropped": 2
+    },
+    "load_distribution": {
+      "edge-1": 42,
+      "edge-2": 41,
+      "ran-1": 37
+    },
+    "per_node_latency": {
+      "edge-1": {
+        "count": 42,
+        "mean_ms": 13.397,
+        "max_ms": 29.249
+      },
+      "edge-2": {
+        "count": 40,
+        "mean_ms": 12.126,
+        "max_ms": 24.969
+      },
+      "ran-1": {
+        "count": 26,
+        "mean_ms": 77.832,
+        "max_ms": 119.311
+      }
+    },
+    "bottleneck_analysis": {
+      "ranked_nodes_worst_first": [
+        {
+          "node": "ran-1",
+          "mean_latency_ms": 77.832,
+          "cpu_utilization": 0.0,
+          "score": 77.832
+        },
+        {
+          "node": "edge-1",
+          "mean_latency_ms": 13.397,
+          "cpu_utilization": 0.0,
+          "score": 13.397
+        },
+        {
+          "node": "edge-2",
+          "mean_latency_ms": 12.126,
+          "cpu_utilization": 0.0,
+          "score": 12.126
+        }
+      ],
+      "likely_bottleneck": "ran-1"
+    }
+  },
+  "node_utilization_raw": {
+    "edge-1": {
+      "status": "ok",
+      "node": "edge-1",
+      "node_type": "EDGE",
+      "tasks_received": 42,
+      "tasks_completed": 42,
+      "tasks_dropped": 0,
+      "tasks_rejected_no_resources": 0,
+      "avg_latency_ms": 13.397,
+      "resource_utilization": {
+        "cpu": 0.0,
+        "memory": 0.0,
+        "bandwidth": 0.0
+      },
+      "current_leader": null,
+      "lamport_ts": 44,
+      "transactions_seen": 0,
+      "lock_state": {
+        "locks": {},
+        "waiters": {}
+      },
+      "_rtt_ms": 2.168
+    },
+    "edge-2": {
+      "status": "ok",
+      "node": "edge-2",
+      "node_type": "EDGE",
+      "tasks_received": 41,
+      "tasks_completed": 40,
+      "tasks_dropped": 1,
+      "tasks_rejected_no_resources": 0,
+      "avg_latency_ms": 12.126,
+      "resource_utilization": {
+        "cpu": 0.0,
+        "memory": 0.0,
+        "bandwidth": 0.0
+      },
+      "current_leader": null,
+      "lamport_ts": 43,
+      "transactions_seen": 0,
+      "lock_state": {
+        "locks": {},
+        "waiters": {}
+      },
+      "_rtt_ms": 2.194
+    },
+    "ran-1": {
+      "status": "ok",
+      "node": "ran-1",
+      "node_type": "RAN",
+      "tasks_received": 37,
+      "tasks_completed": 26,
+      "tasks_dropped": 1,
+      "tasks_rejected_no_resources": 10,
+      "avg_latency_ms": 77.832,
+      "resource_utilization": {
+        "cpu": 0.0,
+        "memory": 0.0,
+        "bandwidth": 0.0
+      },
+      "current_leader": null,
+      "lamport_ts": 39,
+      "transactions_seen": 0,
+      "lock_state": {
+        "locks": {},
+        "waiters": {}
+      },
+      "_rtt_ms": 5.059
+    },
+    "core-1": {
+      "status": "ok",
+      "node": "core-1",
+      "node_type": "CORE",
+      "tasks_received": 0,
+      "tasks_completed": 0,
+      "tasks_dropped": 0,
+      "tasks_rejected_no_resources": 0,
+      "avg_latency_ms": 0.0,
+      "resource_utilization": {
+        "cpu": 0.0,
+        "memory": 0.0,
+        "bandwidth": 0.0
+      },
+      "current_leader": null,
+      "lamport_ts": 2,
+      "transactions_seen": 0,
+      "lock_state": {
+        "locks": {},
+        "waiters": {}
+      },
+      "_rtt_ms": 2.312
+    },
+    "cloud-1": {
+      "status": "ok",
+      "node": "cloud-1",
+      "node_type": "CLOUD",
+      "tasks_received": 0,
+      "tasks_completed": 0,
+      "tasks_dropped": 0,
+      "tasks_rejected_no_resources": 0,
+      "avg_latency_ms": 0.0,
+      "resource_utilization": {
+        "cpu": 0.0,
+        "memory": 0.0,
+        "bandwidth": 0.0
+      },
+      "current_leader": null,
+      "lamport_ts": 2,
+      "transactions_seen": 0,
+      "lock_state": {
+        "locks": {},
+        "waiters": {}
+      },
+      "_rtt_ms": 1.757
+    }
+  }
+}

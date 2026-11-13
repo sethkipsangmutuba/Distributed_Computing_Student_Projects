@@ -1,0 +1,4 @@
+service_class,task_count,avg_cpu,avg_memory_mb,avg_bandwidth_mbps,avg_work_units,total_bandwidth_demand_mbps,stddev_work_units
+mMTC,49720,1.0,19.96,2.0,10.0,99416.6,2.885
+eMBB,30023,2.996,320.34,29.93,80.02,898471.7,23.214
+URLLC,20257,1.499,79.74,6.0,14.91,121625.7,5.77
