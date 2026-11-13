@@ -1,0 +1,6 @@
+metric,value
+cycles_found,1
+victim_chosen,Tx-B-bd
+detection_elapsed_ms,37.193
+batch_rows_processed,100000
+spark_partitions_used,8

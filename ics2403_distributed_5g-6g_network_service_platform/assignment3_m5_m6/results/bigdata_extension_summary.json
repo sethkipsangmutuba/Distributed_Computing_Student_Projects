@@ -1,0 +1,689 @@
+{
+  "n_rows": 100000,
+  "m5_batch": {
+    "technology": "Apache Spark (PySpark, local[*] mode)",
+    "total_rows_processed": 100000,
+    "spark_partitions_used": 8,
+    "by_pair_scenario": [
+      {
+        "pair": "edge-1 <-> ran-1",
+        "scenario": "normal",
+        "attempt_count": 14057,
+        "predicted_commits": 14057,
+        "predicted_aborts": 0,
+        "avg_cpu_requested": 1.244,
+        "total_bandwidth_requested_mbps": 153694.3
+      },
+      {
+        "pair": "edge-1 <-> core-1",
+        "scenario": "normal",
+        "attempt_count": 14057,
+        "predicted_commits": 14057,
+        "predicted_aborts": 0,
+        "avg_cpu_requested": 1.251,
+        "total_bandwidth_requested_mbps": 154730.5
+      },
+      {
+        "pair": "edge-2 <-> ran-1",
+        "scenario": "normal",
+        "attempt_count": 14035,
+        "predicted_commits": 14035,
+        "predicted_aborts": 0,
+        "avg_cpu_requested": 1.247,
+        "total_bandwidth_requested_mbps": 155233.1
+      },
+      {
+        "pair": "edge-2 <-> core-1",
+        "scenario": "normal",
+        "attempt_count": 14025,
+        "predicted_commits": 14025,
+        "predicted_aborts": 0,
+        "avg_cpu_requested": 1.246,
+        "total_bandwidth_requested_mbps": 153754.1
+      },
+      {
+        "pair": "ran-1 <-> core-1",
+        "scenario": "normal",
+        "attempt_count": 13948,
+        "predicted_commits": 13948,
+        "predicted_aborts": 0,
+        "avg_cpu_requested": 1.256,
+        "total_bandwidth_requested_mbps": 153236.2
+      },
+      {
+        "pair": "edge-1 <-> ran-1",
+        "scenario": "high_load",
+        "attempt_count": 4093,
+        "predicted_commits": 4093,
+        "predicted_aborts": 0,
+        "avg_cpu_requested": 1.249,
+        "total_bandwidth_requested_mbps": 44785.9
+      },
+      {
+        "pair": "edge-1 <-> core-1",
+        "scenario": "high_load",
+        "attempt_count": 4027,
+        "predicted_commits": 4027,
+        "predicted_aborts": 0,
+        "avg_cpu_requested": 1.249,
+        "total_bandwidth_requested_mbps": 43897.2
+      },
+      {
+        "pair": "ran-1 <-> core-1",
+        "scenario": "high_load",
+        "attempt_count": 3975,
+        "predicted_commits": 3975,
+        "predicted_aborts": 0,
+        "avg_cpu_requested": 1.249,
+        "total_bandwidth_requested_mbps": 43168.9
+      },
+      {
+        "pair": "edge-2 <-> core-1",
+        "scenario": "high_load",
+        "attempt_count": 3970,
+        "predicted_commits": 3970,
+        "predicted_aborts": 0,
+        "avg_cpu_requested": 1.25,
+        "total_bandwidth_requested_mbps": 44361.7
+      },
+      {
+        "pair": "edge-2 <-> ran-1",
+        "scenario": "high_load",
+        "attempt_count": 3919,
+        "predicted_commits": 3919,
+        "predicted_aborts": 0,
+        "avg_cpu_requested": 1.244,
+        "total_bandwidth_requested_mbps": 43676.4
+      },
+      {
+        "pair": "edge-2 <-> core-1",
+        "scenario": "node_down",
+        "attempt_count": 2022,
+        "predicted_commits": 0,
+        "predicted_aborts": 2022,
+        "avg_cpu_requested": 1.24,
+        "total_bandwidth_requested_mbps": 22708.4
+      },
+      {
+        "pair": "ran-1 <-> core-1",
+        "scenario": "node_down",
+        "attempt_count": 2007,
+        "predicted_commits": 0,
+        "predicted_aborts": 2007,
+        "avg_cpu_requested": 1.251,
+        "total_bandwidth_requested_mbps": 21736.9
+      },
+      {
+        "pair": "edge-1 <-> ran-1",
+        "scenario": "node_down",
+        "attempt_count": 1963,
+        "predicted_commits": 0,
+        "predicted_aborts": 1963,
+        "avg_cpu_requested": 1.246,
+        "total_bandwidth_requested_mbps": 21252.2
+      },
+      {
+        "pair": "edge-1 <-> core-1",
+        "scenario": "node_down",
+        "attempt_count": 1959,
+        "predicted_commits": 0,
+        "predicted_aborts": 1959,
+        "avg_cpu_requested": 1.249,
+        "total_bandwidth_requested_mbps": 21619.2
+      },
+      {
+        "pair": "edge-2 <-> ran-1",
+        "scenario": "node_down",
+        "attempt_count": 1943,
+        "predicted_commits": 0,
+        "predicted_aborts": 1943,
+        "avg_cpu_requested": 1.247,
+        "total_bandwidth_requested_mbps": 21730.2
+      }
+    ],
+    "by_scenario": [
+      {
+        "scenario": "normal",
+        "attempt_count": 70122,
+        "predicted_commit_rate": 1.0
+      },
+      {
+        "scenario": "high_load",
+        "attempt_count": 19984,
+        "predicted_commit_rate": 1.0
+      },
+      {
+        "scenario": "node_down",
+        "attempt_count": 9894,
+        "predicted_commit_rate": 0.0
+      }
+    ]
+  },
+  "m5_live": [
+    {
+      "tx_id": "tx-1-0970fc",
+      "participant_edge": "edge-1",
+      "decision": "commit",
+      "elapsed_ms": 9.779
+    },
+    {
+      "tx_id": "tx-2-33a9a1",
+      "participant_edge": "edge-2",
+      "decision": "commit",
+      "elapsed_ms": 11.755
+    },
+    {
+      "tx_id": "tx-3-ebb816",
+      "participant_edge": "edge-1",
+      "decision": "commit",
+      "elapsed_ms": 12.274
+    },
+    {
+      "tx_id": "tx-4-b7144c",
+      "participant_edge": "edge-2",
+      "decision": "commit",
+      "elapsed_ms": 28.123
+    },
+    {
+      "tx_id": "tx-5-ccda52",
+      "participant_edge": "edge-1",
+      "decision": "commit",
+      "elapsed_ms": 8.259
+    },
+    {
+      "tx_id": "tx-6-0cc02d",
+      "participant_edge": "edge-2",
+      "decision": "commit",
+      "elapsed_ms": 39.586
+    },
+    {
+      "tx_id": "tx-7-f18dcb",
+      "participant_edge": "edge-1",
+      "decision": "commit",
+      "elapsed_ms": 38.98
+    },
+    {
+      "tx_id": "tx-8-56e1ad",
+      "participant_edge": "edge-2",
+      "decision": "commit",
+      "elapsed_ms": 31.574
+    },
+    {
+      "tx_id": "tx-9-2cb92e",
+      "participant_edge": "edge-1",
+      "decision": "commit",
+      "elapsed_ms": 9.924
+    },
+    {
+      "tx_id": "tx-10-617801",
+      "participant_edge": "edge-2",
+      "decision": "commit",
+      "elapsed_ms": 9.881
+    },
+    {
+      "tx_id": "tx-11-4f7b4c",
+      "participant_edge": "edge-1",
+      "decision": "commit",
+      "elapsed_ms": 8.919
+    },
+    {
+      "tx_id": "tx-12-9328b6",
+      "participant_edge": "edge-2",
+      "decision": "commit",
+      "elapsed_ms": 10.78
+    },
+    {
+      "tx_id": "tx-13-b0a26d",
+      "participant_edge": "edge-1",
+      "decision": "commit",
+      "elapsed_ms": 28.117
+    },
+    {
+      "tx_id": "tx-14-b5cb6b",
+      "participant_edge": "edge-2",
+      "decision": "commit",
+      "elapsed_ms": 25.903
+    },
+    {
+      "tx_id": "tx-15-63a4d0",
+      "participant_edge": "edge-1",
+      "decision": "commit",
+      "elapsed_ms": 9.478
+    },
+    {
+      "tx_id": "tx-16-d5f355",
+      "participant_edge": "edge-2",
+      "decision": "commit",
+      "elapsed_ms": 31.765
+    },
+    {
+      "tx_id": "tx-17-49903f",
+      "participant_edge": "edge-1",
+      "decision": "commit",
+      "elapsed_ms": 9.405
+    },
+    {
+      "tx_id": "tx-18-66be3f",
+      "participant_edge": "edge-2",
+      "decision": "commit",
+      "elapsed_ms": 30.687
+    },
+    {
+      "tx_id": "tx-19-1d76d0",
+      "participant_edge": "edge-1",
+      "decision": "commit",
+      "elapsed_ms": 10.785
+    },
+    {
+      "tx_id": "tx-20-d8064f",
+      "participant_edge": "edge-2",
+      "decision": "commit",
+      "elapsed_ms": 19.992
+    },
+    {
+      "tx_id": "tx-21-d94f49",
+      "participant_edge": "edge-1",
+      "decision": "commit",
+      "elapsed_ms": 22.912
+    },
+    {
+      "tx_id": "tx-22-e64abe",
+      "participant_edge": "edge-2",
+      "decision": "commit",
+      "elapsed_ms": 16.948
+    },
+    {
+      "tx_id": "tx-23-56cf58",
+      "participant_edge": "edge-1",
+      "decision": "commit",
+      "elapsed_ms": 44.77
+    },
+    {
+      "tx_id": "tx-24-076070",
+      "participant_edge": "edge-2",
+      "decision": "commit",
+      "elapsed_ms": 30.5
+    },
+    {
+      "tx_id": "tx-25-6dfbf2",
+      "participant_edge": "edge-1",
+      "decision": "commit",
+      "elapsed_ms": 43.999
+    },
+    {
+      "tx_id": "tx-26-253415",
+      "participant_edge": "edge-2",
+      "decision": "commit",
+      "elapsed_ms": 8.609
+    },
+    {
+      "tx_id": "tx-27-9403c3",
+      "participant_edge": "edge-1",
+      "decision": "commit",
+      "elapsed_ms": 25.496
+    },
+    {
+      "tx_id": "tx-28-3f895f",
+      "participant_edge": "edge-2",
+      "decision": "commit",
+      "elapsed_ms": 9.84
+    },
+    {
+      "tx_id": "tx-29-6ed770",
+      "participant_edge": "edge-1",
+      "decision": "commit",
+      "elapsed_ms": 41.793
+    },
+    {
+      "tx_id": "tx-30-753672",
+      "participant_edge": "edge-2",
+      "decision": "commit",
+      "elapsed_ms": 15.481
+    },
+    {
+      "tx_id": "tx-31-c225d6",
+      "participant_edge": "edge-1",
+      "decision": "commit",
+      "elapsed_ms": 8.346
+    },
+    {
+      "tx_id": "tx-32-a68740",
+      "participant_edge": "edge-2",
+      "decision": "commit",
+      "elapsed_ms": 9.354
+    },
+    {
+      "tx_id": "tx-33-f785ca",
+      "participant_edge": "edge-1",
+      "decision": "commit",
+      "elapsed_ms": 8.446
+    },
+    {
+      "tx_id": "tx-34-7e5294",
+      "participant_edge": "edge-2",
+      "decision": "commit",
+      "elapsed_ms": 8.758
+    },
+    {
+      "tx_id": "tx-35-dd2395",
+      "participant_edge": "edge-1",
+      "decision": "commit",
+      "elapsed_ms": 9.373
+    },
+    {
+      "tx_id": "tx-36-84a6d6",
+      "participant_edge": "edge-2",
+      "decision": "commit",
+      "elapsed_ms": 10.883
+    },
+    {
+      "tx_id": "tx-37-d11fdc",
+      "participant_edge": "edge-1",
+      "decision": "commit",
+      "elapsed_ms": 23.858
+    },
+    {
+      "tx_id": "tx-38-8e52ca",
+      "participant_edge": "edge-2",
+      "decision": "commit",
+      "elapsed_ms": 8.829
+    },
+    {
+      "tx_id": "tx-39-617656",
+      "participant_edge": "edge-1",
+      "decision": "commit",
+      "elapsed_ms": 32.04
+    },
+    {
+      "tx_id": "tx-40-b0864c",
+      "participant_edge": "edge-2",
+      "decision": "commit",
+      "elapsed_ms": 33.195
+    },
+    {
+      "tx_id": "tx-41-82c4cf",
+      "participant_edge": "edge-1",
+      "decision": "commit",
+      "elapsed_ms": 20.803
+    },
+    {
+      "tx_id": "tx-42-48b02b",
+      "participant_edge": "edge-2",
+      "decision": "commit",
+      "elapsed_ms": 11.16
+    },
+    {
+      "tx_id": "tx-43-a05ce1",
+      "participant_edge": "edge-1",
+      "decision": "commit",
+      "elapsed_ms": 10.152
+    },
+    {
+      "tx_id": "tx-44-8f3a73",
+      "participant_edge": "edge-2",
+      "decision": "commit",
+      "elapsed_ms": 10.716
+    },
+    {
+      "tx_id": "tx-45-44d89d",
+      "participant_edge": "edge-1",
+      "decision": "commit",
+      "elapsed_ms": 9.121
+    },
+    {
+      "tx_id": "tx-46-e285d7",
+      "participant_edge": "edge-2",
+      "decision": "commit",
+      "elapsed_ms": 10.294
+    },
+    {
+      "tx_id": "tx-47-758001",
+      "participant_edge": "edge-1",
+      "decision": "commit",
+      "elapsed_ms": 32.153
+    },
+    {
+      "tx_id": "tx-48-b5d3db",
+      "participant_edge": "edge-2",
+      "decision": "commit",
+      "elapsed_ms": 19.632
+    },
+    {
+      "tx_id": "tx-49-582545",
+      "participant_edge": "edge-1",
+      "decision": "commit",
+      "elapsed_ms": 9.326
+    },
+    {
+      "tx_id": "tx-50-395580",
+      "participant_edge": "edge-2",
+      "decision": "commit",
+      "elapsed_ms": 31.814
+    }
+  ],
+  "m6_batch": {
+    "technology": "Apache Spark (PySpark, local[*] mode)",
+    "total_rows_processed": 100000,
+    "spark_partitions_used": 8,
+    "contention_by_resource": [
+      {
+        "node": "core-1",
+        "resource": "qos_token",
+        "request_count": 4097,
+        "distinct_transactions": 3780,
+        "avg_order_position": 2.5
+      },
+      {
+        "node": "ran-1",
+        "resource": "radio_channel",
+        "request_count": 4068,
+        "distinct_transactions": 3764,
+        "avg_order_position": 2.5
+      },
+      {
+        "node": "cloud-1",
+        "resource": "context_id",
+        "request_count": 4065,
+        "distinct_transactions": 3722,
+        "avg_order_position": 2.49
+      },
+      {
+        "node": "core-1",
+        "resource": "radio_channel",
+        "request_count": 4038,
+        "distinct_transactions": 3737,
+        "avg_order_position": 2.49
+      },
+      {
+        "node": "ran-1",
+        "resource": "qos_token",
+        "request_count": 4037,
+        "distinct_transactions": 3736,
+        "avg_order_position": 2.5
+      },
+      {
+        "node": "edge-1",
+        "resource": "radio_channel",
+        "request_count": 4035,
+        "distinct_transactions": 3760,
+        "avg_order_position": 2.48
+      },
+      {
+        "node": "edge-1",
+        "resource": "bearer_context",
+        "request_count": 4031,
+        "distinct_transactions": 3750,
+        "avg_order_position": 2.54
+      },
+      {
+        "node": "core-1",
+        "resource": "context_id",
+        "request_count": 4020,
+        "distinct_transactions": 3689,
+        "avg_order_position": 2.5
+      },
+      {
+        "node": "edge-2",
+        "resource": "session_slot",
+        "request_count": 4014,
+        "distinct_transactions": 3689,
+        "avg_order_position": 2.5
+      },
+      {
+        "node": "core-1",
+        "resource": "session_slot",
+        "request_count": 4014,
+        "distinct_transactions": 3716,
+        "avg_order_position": 2.5
+      },
+      {
+        "node": "ran-1",
+        "resource": "bearer_context",
+        "request_count": 4006,
+        "distinct_transactions": 3712,
+        "avg_order_position": 2.49
+      },
+      {
+        "node": "edge-2",
+        "resource": "bearer_context",
+        "request_count": 4002,
+        "distinct_transactions": 3692,
+        "avg_order_position": 2.5
+      },
+      {
+        "node": "cloud-1",
+        "resource": "qos_token",
+        "request_count": 4000,
+        "distinct_transactions": 3684,
+        "avg_order_position": 2.47
+      },
+      {
+        "node": "ran-1",
+        "resource": "session_slot",
+        "request_count": 4000,
+        "distinct_transactions": 3698,
+        "avg_order_position": 2.51
+      },
+      {
+        "node": "cloud-1",
+        "resource": "bearer_context",
+        "request_count": 3999,
+        "distinct_transactions": 3711,
+        "avg_order_position": 2.5
+      },
+      {
+        "node": "edge-2",
+        "resource": "radio_channel",
+        "request_count": 3997,
+        "distinct_transactions": 3694,
+        "avg_order_position": 2.5
+      },
+      {
+        "node": "cloud-1",
+        "resource": "radio_channel",
+        "request_count": 3980,
+        "distinct_transactions": 3674,
+        "avg_order_position": 2.51
+      },
+      {
+        "node": "edge-1",
+        "resource": "context_id",
+        "request_count": 3970,
+        "distinct_transactions": 3655,
+        "avg_order_position": 2.51
+      },
+      {
+        "node": "cloud-1",
+        "resource": "session_slot",
+        "request_count": 3960,
+        "distinct_transactions": 3659,
+        "avg_order_position": 2.52
+      },
+      {
+        "node": "edge-2",
+        "resource": "qos_token",
+        "request_count": 3959,
+        "distinct_transactions": 3669,
+        "avg_order_position": 2.49
+      },
+      {
+        "node": "ran-1",
+        "resource": "context_id",
+        "request_count": 3954,
+        "distinct_transactions": 3678,
+        "avg_order_position": 2.5
+      },
+      {
+        "node": "edge-2",
+        "resource": "context_id",
+        "request_count": 3951,
+        "distinct_transactions": 3633,
+        "avg_order_position": 2.52
+      },
+      {
+        "node": "edge-1",
+        "resource": "qos_token",
+        "request_count": 3948,
+        "distinct_transactions": 3634,
+        "avg_order_position": 2.48
+      },
+      {
+        "node": "core-1",
+        "resource": "bearer_context",
+        "request_count": 3931,
+        "distinct_transactions": 3643,
+        "avg_order_position": 2.52
+      },
+      {
+        "node": "edge-1",
+        "resource": "session_slot",
+        "request_count": 3924,
+        "distinct_transactions": 3646,
+        "avg_order_position": 2.47
+      }
+    ]
+  },
+  "m6_live": {
+    "outcomes": {
+      "A_edge1": "granted",
+      "B_core1": "granted",
+      "B_edge1": "aborted_by_deadlock_resolution",
+      "A_core1": "granted"
+    },
+    "detection_report": {
+      "wait_for_graph": {
+        "Tx-B-bd": [
+          "Tx-A-bd"
+        ],
+        "Tx-A-bd": [
+          "Tx-B-bd"
+        ]
+      },
+      "cycles_found": [
+        [
+          "Tx-B-bd",
+          "Tx-A-bd",
+          "Tx-B-bd"
+        ]
+      ],
+      "resolutions": [
+        {
+          "victim": "Tx-B-bd",
+          "cycle": [
+            "Tx-B-bd",
+            "Tx-A-bd",
+            "Tx-B-bd"
+          ],
+          "broadcast_results": {
+            "edge-1": "marked",
+            "edge-2": "marked",
+            "ran-1": "marked",
+            "core-1": "marked",
+            "cloud-1": "marked"
+          }
+        }
+      ],
+      "detection_elapsed_ms": 37.193
+    }
+  }
+}

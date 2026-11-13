@@ -1,0 +1,7 @@
+metric,value
+wall_clock_seconds,1.344
+throughput_tasks_per_sec,319.891
+mean_latency_ms,15.843
+p95_latency_ms,41.141
+jitter_ms,9.372
+packet_loss_rate,0.2833

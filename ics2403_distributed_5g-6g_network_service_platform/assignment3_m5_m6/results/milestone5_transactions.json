@@ -1,0 +1,593 @@
+{
+  "summary": {
+    "phase_a_normal_operation": {
+      "total_transactions": 30,
+      "committed": 30,
+      "mean_latency_ms": 11.717
+    },
+    "phase_b_node_failure": {
+      "total_transactions": 20,
+      "committed": 10,
+      "aborted": 10,
+      "availability_for_unaffected_traffic": 1.0
+    },
+    "consistency_check": {
+      "acknowledgment_gaps_due_to_dead_participant": 10,
+      "note": "Gaps are expected here -- they are all Phase B transactions touching the deliberately-killed edge-2 node. This is 2PC's known blocking limitation, not a system defect; see the report for discussion."
+    }
+  },
+  "phase_a_sample": [
+    {
+      "tx_id": "tx-1-44edb4",
+      "decision": "commit",
+      "votes": {
+        "edge-1": "commit",
+        "ran-1": "commit"
+      },
+      "acks": {
+        "edge-1": "committed",
+        "ran-1": "committed"
+      },
+      "unreachable_on_completion": [],
+      "fully_consistent": true,
+      "elapsed_ms": 10.613,
+      "log": [
+        {
+          "t": 1794402258.584079,
+          "phase": "prepare",
+          "detail": {
+            "participant": "edge-1",
+            "vote": "commit"
+          }
+        },
+        {
+          "t": 1794402258.58652,
+          "phase": "prepare",
+          "detail": {
+            "participant": "ran-1",
+            "vote": "commit"
+          }
+        },
+        {
+          "t": 1794402258.586552,
+          "phase": "decision",
+          "detail": {
+            "decision": "commit",
+            "votes": {
+              "edge-1": "commit",
+              "ran-1": "commit"
+            }
+          }
+        },
+        {
+          "t": 1794402258.590535,
+          "phase": "completion",
+          "detail": {
+            "participant": "edge-1",
+            "action": "tx_commit",
+            "ack": "committed"
+          }
+        },
+        {
+          "t": 1794402258.59254,
+          "phase": "completion",
+          "detail": {
+            "participant": "ran-1",
+            "action": "tx_commit",
+            "ack": "committed"
+          }
+        }
+      ]
+    },
+    {
+      "tx_id": "tx-2-77583e",
+      "decision": "commit",
+      "votes": {
+        "edge-2": "commit",
+        "ran-1": "commit"
+      },
+      "acks": {
+        "edge-2": "committed",
+        "ran-1": "committed"
+      },
+      "unreachable_on_completion": [],
+      "fully_consistent": true,
+      "elapsed_ms": 14.067,
+      "log": [
+        {
+          "t": 1794402258.599074,
+          "phase": "prepare",
+          "detail": {
+            "participant": "edge-2",
+            "vote": "commit"
+          }
+        },
+        {
+          "t": 1794402258.601292,
+          "phase": "prepare",
+          "detail": {
+            "participant": "ran-1",
+            "vote": "commit"
+          }
+        },
+        {
+          "t": 1794402258.601327,
+          "phase": "decision",
+          "detail": {
+            "decision": "commit",
+            "votes": {
+              "edge-2": "commit",
+              "ran-1": "commit"
+            }
+          }
+        },
+        {
+          "t": 1794402258.607585,
+          "phase": "completion",
+          "detail": {
+            "participant": "edge-2",
+            "action": "tx_commit",
+            "ack": "committed"
+          }
+        },
+        {
+          "t": 1794402258.61104,
+          "phase": "completion",
+          "detail": {
+            "participant": "ran-1",
+            "action": "tx_commit",
+            "ack": "committed"
+          }
+        }
+      ]
+    },
+    {
+      "tx_id": "tx-3-e7ad70",
+      "decision": "commit",
+      "votes": {
+        "edge-1": "commit",
+        "ran-1": "commit"
+      },
+      "acks": {
+        "edge-1": "committed",
+        "ran-1": "committed"
+      },
+      "unreachable_on_completion": [],
+      "fully_consistent": true,
+      "elapsed_ms": 16.014,
+      "log": [
+        {
+          "t": 1794402258.638976,
+          "phase": "prepare",
+          "detail": {
+            "participant": "edge-1",
+            "vote": "commit"
+          }
+        },
+        {
+          "t": 1794402258.646897,
+          "phase": "prepare",
+          "detail": {
+            "participant": "ran-1",
+            "vote": "commit"
+          }
+        },
+        {
+          "t": 1794402258.646934,
+          "phase": "decision",
+          "detail": {
+            "decision": "commit",
+            "votes": {
+              "edge-1": "commit",
+              "ran-1": "commit"
+            }
+          }
+        },
+        {
+          "t": 1794402258.649388,
+          "phase": "completion",
+          "detail": {
+            "participant": "edge-1",
+            "action": "tx_commit",
+            "ack": "committed"
+          }
+        },
+        {
+          "t": 1794402258.651428,
+          "phase": "completion",
+          "detail": {
+            "participant": "ran-1",
+            "action": "tx_commit",
+            "ack": "committed"
+          }
+        }
+      ]
+    }
+  ],
+  "phase_b_sample": [
+    {
+      "tx_id": "tx-31-2de4a7",
+      "decision": "abort",
+      "votes": {
+        "edge-2": "unreachable",
+        "ran-1": "commit"
+      },
+      "acks": {
+        "edge-2": "unreachable",
+        "ran-1": "aborted"
+      },
+      "unreachable_on_completion": [
+        "edge-2"
+      ],
+      "fully_consistent": false,
+      "elapsed_ms": 6344.534,
+      "log": [
+        {
+          "t": 1794402260.687732,
+          "phase": "prepare",
+          "detail": {
+            "participant": "edge-2",
+            "vote": "unreachable"
+          }
+        },
+        {
+          "t": 1794402260.689741,
+          "phase": "prepare",
+          "detail": {
+            "participant": "ran-1",
+            "vote": "commit"
+          }
+        },
+        {
+          "t": 1794402260.689762,
+          "phase": "decision",
+          "detail": {
+            "decision": "abort",
+            "votes": {
+              "edge-2": "unreachable",
+              "ran-1": "commit"
+            }
+          }
+        },
+        {
+          "t": 1794402265.518131,
+          "phase": "completion",
+          "detail": {
+            "participant": "edge-2",
+            "action": "tx_abort",
+            "ack": "unreachable"
+          }
+        },
+        {
+          "t": 1794402265.527891,
+          "phase": "completion",
+          "detail": {
+            "participant": "ran-1",
+            "action": "tx_abort",
+            "ack": "aborted"
+          }
+        }
+      ],
+      "_targeted_dead_node": true
+    },
+    {
+      "tx_id": "tx-32-475c17",
+      "decision": "commit",
+      "votes": {
+        "edge-1": "commit",
+        "ran-1": "commit"
+      },
+      "acks": {
+        "edge-1": "committed",
+        "ran-1": "committed"
+      },
+      "unreachable_on_completion": [],
+      "fully_consistent": true,
+      "elapsed_ms": 24.51,
+      "log": [
+        {
+          "t": 1794402265.542228,
+          "phase": "prepare",
+          "detail": {
+            "participant": "edge-1",
+            "vote": "commit"
+          }
+        },
+        {
+          "t": 1794402265.544599,
+          "phase": "prepare",
+          "detail": {
+            "participant": "ran-1",
+            "vote": "commit"
+          }
+        },
+        {
+          "t": 1794402265.544623,
+          "phase": "decision",
+          "detail": {
+            "decision": "commit",
+            "votes": {
+              "edge-1": "commit",
+              "ran-1": "commit"
+            }
+          }
+        },
+        {
+          "t": 1794402265.550079,
+          "phase": "completion",
+          "detail": {
+            "participant": "edge-1",
+            "action": "tx_commit",
+            "ack": "committed"
+          }
+        },
+        {
+          "t": 1794402265.5525,
+          "phase": "completion",
+          "detail": {
+            "participant": "ran-1",
+            "action": "tx_commit",
+            "ack": "committed"
+          }
+        }
+      ],
+      "_targeted_dead_node": false
+    },
+    {
+      "tx_id": "tx-33-207042",
+      "decision": "abort",
+      "votes": {
+        "edge-2": "unreachable",
+        "ran-1": "commit"
+      },
+      "acks": {
+        "edge-2": "unreachable",
+        "ran-1": "aborted"
+      },
+      "unreachable_on_completion": [
+        "edge-2"
+      ],
+      "fully_consistent": false,
+      "elapsed_ms": 6332.499,
+      "log": [
+        {
+          "t": 1794402267.059255,
+          "phase": "prepare",
+          "detail": {
+            "participant": "edge-2",
+            "vote": "unreachable"
+          }
+        },
+        {
+          "t": 1794402267.062487,
+          "phase": "prepare",
+          "detail": {
+            "participant": "ran-1",
+            "vote": "commit"
+          }
+        },
+        {
+          "t": 1794402267.062548,
+          "phase": "decision",
+          "detail": {
+            "decision": "abort",
+            "votes": {
+              "edge-2": "unreachable",
+              "ran-1": "commit"
+            }
+          }
+        },
+        {
+          "t": 1794402271.887552,
+          "phase": "completion",
+          "detail": {
+            "participant": "edge-2",
+            "action": "tx_abort",
+            "ack": "unreachable"
+          }
+        },
+        {
+          "t": 1794402271.890159,
+          "phase": "completion",
+          "detail": {
+            "participant": "ran-1",
+            "action": "tx_abort",
+            "ack": "aborted"
+          }
+        }
+      ],
+      "_targeted_dead_node": true
+    },
+    {
+      "tx_id": "tx-34-b31f07",
+      "decision": "commit",
+      "votes": {
+        "edge-1": "commit",
+        "ran-1": "commit"
+      },
+      "acks": {
+        "edge-1": "committed",
+        "ran-1": "committed"
+      },
+      "unreachable_on_completion": [],
+      "fully_consistent": true,
+      "elapsed_ms": 9.974,
+      "log": [
+        {
+          "t": 1794402271.893155,
+          "phase": "prepare",
+          "detail": {
+            "participant": "edge-1",
+            "vote": "commit"
+          }
+        },
+        {
+          "t": 1794402271.895725,
+          "phase": "prepare",
+          "detail": {
+            "participant": "ran-1",
+            "vote": "commit"
+          }
+        },
+        {
+          "t": 1794402271.895758,
+          "phase": "decision",
+          "detail": {
+            "decision": "commit",
+            "votes": {
+              "edge-1": "commit",
+              "ran-1": "commit"
+            }
+          }
+        },
+        {
+          "t": 1794402271.898143,
+          "phase": "completion",
+          "detail": {
+            "participant": "edge-1",
+            "action": "tx_commit",
+            "ack": "committed"
+          }
+        },
+        {
+          "t": 1794402271.900236,
+          "phase": "completion",
+          "detail": {
+            "participant": "ran-1",
+            "action": "tx_commit",
+            "ack": "committed"
+          }
+        }
+      ],
+      "_targeted_dead_node": false
+    },
+    {
+      "tx_id": "tx-35-7ddad5",
+      "decision": "abort",
+      "votes": {
+        "edge-2": "unreachable",
+        "ran-1": "commit"
+      },
+      "acks": {
+        "edge-2": "unreachable",
+        "ran-1": "aborted"
+      },
+      "unreachable_on_completion": [
+        "edge-2"
+      ],
+      "fully_consistent": false,
+      "elapsed_ms": 6331.828,
+      "log": [
+        {
+          "t": 1794402273.420126,
+          "phase": "prepare",
+          "detail": {
+            "participant": "edge-2",
+            "vote": "unreachable"
+          }
+        },
+        {
+          "t": 1794402273.423327,
+          "phase": "prepare",
+          "detail": {
+            "participant": "ran-1",
+            "vote": "commit"
+          }
+        },
+        {
+          "t": 1794402273.423367,
+          "phase": "decision",
+          "detail": {
+            "decision": "abort",
+            "votes": {
+              "edge-2": "unreachable",
+              "ran-1": "commit"
+            }
+          }
+        },
+        {
+          "t": 1794402278.23379,
+          "phase": "completion",
+          "detail": {
+            "participant": "edge-2",
+            "action": "tx_abort",
+            "ack": "unreachable"
+          }
+        },
+        {
+          "t": 1794402278.2368,
+          "phase": "completion",
+          "detail": {
+            "participant": "ran-1",
+            "action": "tx_abort",
+            "ack": "aborted"
+          }
+        }
+      ],
+      "_targeted_dead_node": true
+    },
+    {
+      "tx_id": "tx-36-2bc14b",
+      "decision": "commit",
+      "votes": {
+        "edge-1": "commit",
+        "ran-1": "commit"
+      },
+      "acks": {
+        "edge-1": "committed",
+        "ran-1": "committed"
+      },
+      "unreachable_on_completion": [],
+      "fully_consistent": true,
+      "elapsed_ms": 10.86,
+      "log": [
+        {
+          "t": 1794402278.239657,
+          "phase": "prepare",
+          "detail": {
+            "participant": "edge-1",
+            "vote": "commit"
+          }
+        },
+        {
+          "t": 1794402278.242119,
+          "phase": "prepare",
+          "detail": {
+            "participant": "ran-1",
+            "vote": "commit"
+          }
+        },
+        {
+          "t": 1794402278.24215,
+          "phase": "decision",
+          "detail": {
+            "decision": "commit",
+            "votes": {
+              "edge-1": "commit",
+              "ran-1": "commit"
+            }
+          }
+        },
+        {
+          "t": 1794402278.245146,
+          "phase": "completion",
+          "detail": {
+            "participant": "edge-1",
+            "action": "tx_commit",
+            "ack": "committed"
+          }
+        },
+        {
+          "t": 1794402278.24778,
+          "phase": "completion",
+          "detail": {
+            "participant": "ran-1",
+            "action": "tx_commit",
+            "ack": "committed"
+          }
+        }
+      ],
+      "_targeted_dead_node": false
+    }
+  ]
+}

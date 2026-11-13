@@ -1,0 +1,4 @@
+assigned_node,node_type,task_count,total_cpu_demand,total_memory_demand_mb,total_bandwidth_demand_mbps,avg_work_units
+edge-2,EDGE,35089,40141.9,1307689.9,110908.6,11.47
+edge-1,EDGE,34888,39950.5,1299986.1,110133.7,11.37
+ran-1,RAN,30023,89952.7,9617715.0,898471.7,80.02

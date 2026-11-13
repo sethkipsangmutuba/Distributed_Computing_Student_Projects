@@ -1,0 +1,16 @@
+pair,scenario,attempt_count,predicted_commits,predicted_aborts,avg_cpu_requested,total_bandwidth_requested_mbps
+edge-1 <-> ran-1,normal,14057,14057,0,1.244,153694.3
+edge-1 <-> core-1,normal,14057,14057,0,1.251,154730.5
+edge-2 <-> ran-1,normal,14035,14035,0,1.247,155233.1
+edge-2 <-> core-1,normal,14025,14025,0,1.246,153754.1
+ran-1 <-> core-1,normal,13948,13948,0,1.256,153236.2
+edge-1 <-> ran-1,high_load,4093,4093,0,1.249,44785.9
+edge-1 <-> core-1,high_load,4027,4027,0,1.249,43897.2
+ran-1 <-> core-1,high_load,3975,3975,0,1.249,43168.9
+edge-2 <-> core-1,high_load,3970,3970,0,1.25,44361.7
+edge-2 <-> ran-1,high_load,3919,3919,0,1.244,43676.4
+edge-2 <-> core-1,node_down,2022,0,2022,1.24,22708.4
+ran-1 <-> core-1,node_down,2007,0,2007,1.251,21736.9
+edge-1 <-> ran-1,node_down,1963,0,1963,1.246,21252.2
+edge-1 <-> core-1,node_down,1959,0,1959,1.249,21619.2
+edge-2 <-> ran-1,node_down,1943,0,1943,1.247,21730.2

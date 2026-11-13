@@ -1,0 +1,10 @@
+# Distributed 5G/6G Network Service Platform - Python dependencies
+# Everything in common/ (nodes, processes, resources, communication,
+# coordination) uses ONLY the Python standard library on purpose.
+# These three are needed only for the Big Data / Power BI extension
+# (assignment2_m3_m4/assignment2_bigdata_extension.py).
+
+pyspark>=4.0
+pandas>=2.0
+numpy>=1.24
+pyarrow>=14.0
